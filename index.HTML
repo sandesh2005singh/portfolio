@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sci-Fi Portfolio sandseh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: #0a0a0a;
+            color: #00ff88;
+            overflow-x: hidden;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            padding: 2rem;
+        }
+
+        nav {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                min-height: 8vh;
+                background: rgba(0,0,0,0.8);
+                border-bottom: 1px solid #00ff88;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                z-index: 1000;
+            }
+
+            .logo {
+                color: #00ff88;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                font-size: 20px;
+            }
+
+            .nav-links {
+                display: flex;
+                justify-content: space-evenly;
+                width: 40%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .nav-links li {
+                list-style: none;
+            }
+
+            .nav-links a {
+                color: #00ff88;
+                text-decoration: none;
+                letter-spacing: 3px;
+                font-weight: bold;
+                font-size: 14px;
+                transition: 0.3s;
+            }
+
+            .nav-links a:hover {
+                color: #fff;
+                text-shadow: 0 0 10px #00ff88;
+            }
+
+            .burger {
+                display: none;
+                cursor: pointer;
+            }
+
+            .burger div {
+                width: 25px;
+                height: 3px;
+                background-color: #00ff88;
+                margin: 5px;
+                transition: all 0.3s ease;
+            }
+
+            @media screen and (max-width: 1024px) {
+                .nav-links {
+                    width: 60%;
+                    
+                }
+                .nav-links a{
+                    letter-spacing: 2px;
+                }
+                nav .logo{
+                    letter-spacing: 2px;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                body {
+                    overflow-x: hidden;
+                }
+                
+                .nav-links {
+                    position: fixed;
+                    right: 0px;
+                    height: 92vh;
+                    top: 8vh;
+                    background: rgba(0,0,0,0.9);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 50%;
+                    transform: translateX(100%);
+                    transition: transform 0.5s ease-in;
+                }
+                
+                .nav-links li {
+                    opacity: 0;
+                }
+                
+                .burger {
+                    display: block;
+                }
+                .logo{
+                    margin-left: -30px;
+                    font-size: 15px;
+                }
+            }
+
+            .nav-active {
+                transform: translateX(0%);
+            }
+
+            @keyframes navLinkFade {
+                from {
+                    opacity: 0;
+                    transform: translateX(50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0px);
+                }
+            }
+
+            .toggle .line1 {
+                transform: rotate(-45deg) translate(-5px,6px);
+            }
+
+            .toggle .line2 {
+                opacity: 0;
+            }
+
+            .toggle .line3 {
+                transform: rotate(45deg) translate(-5px,-6px);
+            }
+
+        .hero {
+             color: #00eb7d;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            z-index: 100;
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 0 0 20px #00ff88;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #00ff88;
+            }
+            to {
+                text-shadow: 0 0 20px #00ff88, 0 0 30px #00ff88;
+            }
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 5rem 2rem;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: rgba(0,0,0,0.8);
+            border: 1px solid #00ff88;
+            padding: 1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px #00ff88;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            nav ul {
+                justify-content: center;
+            }
+        }
+        .about-content {
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 2rem;
+                    background: rgba(0,0,0,0.8);
+                    border: 1px solid #00ff88;
+                    border-radius: 10px;
+                }
+                
+                .about-content p {
+                    margin-bottom: 1.5rem;
+                    line-height: 1.6;
+                }
+                
+                .about-content ul {
+                    list-style-type: none;
+                    padding: 0;
+                }
+                
+                .about-content ul li {
+                    margin: 0.5rem 0;
+                    padding-left: 1.5rem;
+                    position: relative;
+                }
+                
+                .about-content ul li:before {
+                    content: ">";
+                    position: absolute;
+                    left: 0;
+                    color: #00ff88;
+                }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="bg"></canvas>
+
+    <main class="content">
+        <nav>
+            <div class="logo">
+                <h4>Sandesh's Portfolio</h4>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+
+
+
+        <section id="home" class="hero">
+            <h1>Welcome to My Universe</h1>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I am a passionate Python developer with a deep love for creating elegant solutions to complex problems. My journey in software development has been driven by curiosity and a desire to build meaningful applications that make a difference.</p>
+                
+                <p>Specializing in Python development, I have experience working with various frameworks and technologies including:</p>
+                <ul>
+                    <li>Web Development with Django and Flask</li>
+                    <li>Game Development using Pygame</li>
+                    <li>Data Analysis and Visualization</li>
+                    <li>Network Programming and Socket Applications</li>
+                    <li>Multi-threading and Concurrent Programming</li>
+                </ul>
+
+                <p>When I'm not coding, I'm constantly learning new technologies and contributing to open-source projects. I believe in writing clean, maintainable code and creating intuitive user experiences.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Project Alpha</h3>
+                    <p>Futuristic web application</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project Beta</h3>
+                    <p>AI-powered solution</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project Gamma</h3>
+                    <p>Blockchain innovation</p>
+                </div>
+            </div>
+        </section>        
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="about-content">
+                <form id="contact-form">
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="name" style="display: block; margin-bottom: 0.5rem;">Name:</label>
+                        <input type="text" id="name" name="name" required 
+                               style="width: 100%; padding: 0.5rem; background: rgba(0,0,0,0.5); 
+                                      border: 1px solid #00ff88; color: #00ff88; border-radius: 5px;">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="email" style="display: block; margin-bottom: 0.5rem;">Email:</label>
+                        <input type="email" id="email" name="email" required
+                               style="width: 100%; padding: 0.5rem; background: rgba(0,0,0,0.5);
+                                      border: 1px solid #00ff88; color: #00ff88; border-radius: 5px;">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="message" style="display: block; margin-bottom: 0.5rem;">Message:</label>
+                        <textarea id="message" name="message" rows="5" required
+                                  style="width: 100%; padding: 0.5rem; background: rgba(0,0,0,0.5);
+                                         border: 1px solid #00ff88; color: #00ff88; border-radius: 5px;
+                                         resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" 
+                            style="background: #00ff88; color: #000; border: none; padding: 0.8rem 2rem;
+                                   border-radius: 5px; cursor: pointer; font-family: 'Orbitron', sans-serif;
+                                   text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s ease;">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.154.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.154.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+        // Scene setup
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({
+            canvas: document.querySelector('#bg'),
+            antialias: true
+        });
+
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.position.setZ(30);
+
+        // Lights
+        const pointLight = new THREE.PointLight(0x00ff88);
+        pointLight.position.set(5, 5, 5);
+        const ambientLight = new THREE.AmbientLight(0xffffff);
+        scene.add(pointLight, ambientLight);
+
+        // Stars
+        function addStar() {
+            const geometry = new THREE.SphereGeometry(0.25, 24, 24);
+            const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+            const star = new THREE.Mesh(geometry, material);
+
+            const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(100));
+            star.position.set(x, y, z);
+            scene.add(star);
+        }
+        Array(200).fill().forEach(addStar);
+
+        // Torus
+        const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
+        const material = new THREE.MeshStandardMaterial({ color: 0x00ff88 });
+        const torus = new THREE.Mesh(geometry, material);
+        scene.add(torus);
+
+        // Controls
+        const controls = new OrbitControls(camera, renderer.domElement);
+
+        // Animation
+        function animate() {
+            requestAnimationFrame(animate);
+
+            torus.rotation.x += 0.01;
+            torus.rotation.y += 0.005;
+            torus.rotation.z += 0.01;
+
+            controls.update();
+            renderer.render(scene, camera);
+        }
+
+        // Responsive handling
+        window.addEventListener('resize', onWindowResize, false);
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        animate();
+
+        const navSlide = () => {
+                const burger = document.querySelector('.burger');
+                const nav = document.querySelector('.nav-links');
+                const navLinks = document.querySelectorAll('.nav-links li');
+
+                burger.addEventListener('click', () => {
+                    nav.classList.toggle('nav-active');
+
+                    navLinks.forEach((link, index) => {
+                        if (link.style.animation) {
+                            link.style.animation = '';
+                        } else {
+                            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                        }
+                    });
+
+                    burger.classList.toggle('toggle');
+                });
+            }
+
+            navSlide();
+    </script>
+</body>
+</html>
+
