@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sandesh - 2D Animator & Storyteller</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Comic+Neue:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Progress Bar -->
+  <div class="progress-bar" id="progress-bar"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="#hero">Sandesh singh</a>
+      </div>
+      <div class="nav-toggle" id="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#behind" class="nav-link">Process</a></li>
+        <li><a href="#testimonials" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="paper-texture"></div>
+    
+    <!-- Animation elements -->
+    <div class="floating-icons">
+      <div class="floating-icon">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#4A90E2" stroke-width="2">
+          <path class="sketch-line" d="M12 19l7-7 3 3-7 7-3-3z"/>
+          <path class="sketch-line" d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+        </svg>
+      </div>
+      
+      <div class="floating-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F5C542" stroke-width="2">
+          <rect class="sketch-line" x="2" y="6" width="20" height="12" rx="2"/>
+          <line class="sketch-line" x1="2" y1="10" x2="22" y2="10"/>
+        </svg>
+      </div>
+      
+      <div class="floating-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#545454" stroke-width="2">
+          <circle class="sketch-line" cx="12" cy="12" r="9"/>
+          <path class="sketch-line" d="M12 3v9l4 4"/>
+        </svg>
+      </div>
+      
+      <div class="floating-icon">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#4A90E2" stroke-width="2">
+          <path class="sketch-line" d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path class="sketch-line" d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </svg>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="hero-content">
+        <div class="typewriter">
+          <h1>Hi, I'm Sandesh</h1>
+        </div>
+        
+        <h2>A Python Developer & Data Analyst</h2>
+        
+        <p>Bringing imagination to over the World</p>
+        
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-play-circle"></i> Watch Showreel
+          </a>
+          
+          <a href="#about" class="btn btn-secondary">
+            <i class="fas fa-arrow-down"></i> Scroll Down
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Doodle Border -->
+    <div class="doodle-border">
+      <svg viewBox="0 0 1200 30" fill="none" preserveAspectRatio="none" class="border-svg">
+        <path class="sketch-line wavy-border" d="M0,15 Q60,5 120,15 T240,15 T360,15 T480,15 T600,15 T720,15 T840,15 T960,15 T1080,15 T1200,15" stroke="#2C2C2C" stroke-width="2"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2 class="section-title fade-in-up">Meet the Character</h2>
+      
+      <div class="about-content">
+        <!-- Avatar -->
+        <div class="about-avatar slide-in-left">
+          <img src="developer.png" alt="Developer portrait" class="rotate-animation">
+        </div>
+        
+        <!-- About content -->
+        <div class="about-info slide-in-right">
+          <div class="about-text">
+            <p>Hello! I'm a passionate Python Developer that starts smartly and complete hardly and bring imagination to over world. My journey began with a single line <mark>print("Hello World")</mark> and a dream, evolving into a career of automated world.</p>
+            
+            <p>With a background in art of artificial technology and modern automation techniques, I blend classic ideas with contemporary tools to create most usable work experiences.</p>
+          </div>
+          
+          <!-- Journey Timeline -->
+          <div class="timeline stagger-container">
+            <!-- Timeline item 1 -->
+            <div class="timeline-item stagger-item">
+              <div class="timeline-icon timeline-yellow">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="timeline-content">
+                <h3>Computer School Graduation</h3>
+                <p>Specialized in manipulative artificial intelligent techniques and automate world.</p>
+              </div>
+            </div>
+            
+            <!-- Timeline item 2 -->
+            <div class="timeline-item stagger-item">
+              <div class="timeline-icon timeline-blue">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div class="timeline-content">
+                <h3>Circle Experience</h3>
+                <p>Worked with leading circle friends on commercial and usefull projects.</p>
+              </div>
+            </div>
+            
+            <!-- Timeline item 3 -->
+            <div class="timeline-item stagger-item">
+              <div class="timeline-icon timeline-yellow">
+                <i class="fas fa-award"></i>
+              </div>
+              <div class="timeline-content">
+                <h3>As Independent developer</h3>
+                <p>Now creating a artificial intelligent with realize emotions.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Tools -->
+          <div class="tools-container zoom-in">
+            <h3>My Favorite Tools:</h3>
+            <div class="tools-list">
+              <span class="tool-tag">VS Code</span>
+              <span class="tool-tag">Pycharm</span>
+              <span class="tool-tag">Chatgpt</span>
+              <span class="tool-tag">Power BI</span>
+              <span class="tool-tag">Tableau</span>
+              <span class="tool-tag">Excel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Doodle Border -->
+    <div class="doodle-border draw-animation">
+      <svg viewBox="0 0 1200 30" fill="none" preserveAspectRatio="none" class="border-svg">
+        <path class="sketch-line curved-border" d="M0,20 C50,10 100,25 150,15 S250,5 300,15 S400,25 450,15 S550,5 600,15 S700,25 750,15 S850,5 900,15 S1000,25 1050,15 S1150,5 1200,15" stroke="#2C2C2C" stroke-width="2"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <h2 class="section-title fade-in-up">Skills</h2>
+      
+      <div class="skills-grid stagger-container">
+        <!-- Skill 1 -->
+        <div class="skill-card stagger-item rotate-1">
+          <div class="skill-icon skill-blue">
+            <i class="fas fa-pencil-alt"></i>
+          </div>
+          <h3>Real time problems solve</h3>
+          <p>Quickly analyzing problems and delivering effective solutions on the spot.</p>
+        </div>
+        
+        <!-- Skill 2 -->
+        <div class="skill-card stagger-item rotate-neg-1">
+          <div class="skill-icon skill-yellow">
+            <i class="fas fa-film"></i>
+          </div>
+          <h3>Data analysis</h3>
+          <p>Extracting insights from data to support smart decision-making.</p>
+        </div>
+        
+        <!-- Skill 3 -->
+        <div class="skill-card stagger-item rotate-1">
+          <div class="skill-icon skill-blue">
+            <i class="fas fa-comment"></i>
+          </div>
+          <h3>Django / Flask</h3>
+          <p>Building fast, scalable, and secure web applications. Crafting dynamic and efficient web solutions.</p>
+        </div>
+        
+        <!-- Skill 4 -->
+        <div class="skill-card stagger-item rotate-neg-1">
+          <div class="skill-icon skill-yellow">
+            <i class="fas fa-mountain"></i>
+          </div>
+          <h3>Rest Api's</h3>
+          <p>Creating seamless data exchange across applications.</p>
+        </div>
+        
+        <!-- Skill 5 -->
+        <div class="skill-card stagger-item rotate-1">
+          <div class="skill-icon skill-blue">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3>API Integrestion</h3>
+          <p>Seamlessly integrating third-party APIs to improve system capabilities.</p>
+        </div>
+        
+        <!-- Skill 6 -->
+        <div class="skill-card stagger-item rotate-neg-1">
+          <div class="skill-icon skill-yellow">
+            <i class="fas fa-walking"></i>
+          </div>
+          <h3>Data scraping</h3>
+          <p>Automating data collection from web sources for analysis and reporting.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Doodle Border -->
+    <div class="doodle-border draw-animation">
+      <svg viewBox="0 0 1200 30" fill="none" preserveAspectRatio="none" class="border-svg">
+        <path class="sketch-line zigzag-border" d="M0,10 Q30,20 60,10 T120,10 T180,10 T240,10 T300,10 T360,10 T420,10 T480,10 T540,10 T600,10 T660,10 T720,10 T780,10 T840,10 T900,10 T960,10 T1020,10 T1080,10 T1140,10 T1200,10" stroke="#2C2C2C" stroke-width="2"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2 class="section-title fade-in-up">Projects</h2>
+      
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card rotate-1 fade-in-up">
+          <div class="project-image">
+            <img src="data:image/jpeg;base64,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" alt="The Lost Forest">
+          </div>
+          <h3>Ai whiteboard</h3>
+          <p> Smart whiteboard with AI integration for seamless drawing, annotation, and instant solutions.</p>
+          <div class="project-tags">
+            <span class="project-tag">Flask</span>
+            <span class="project-tag">Web</span>
+            <span class="project-tag">Gemini Api</span>
+          </div>
+          <a href="#" class="project-link">
+            <i class="fas fa-play"></i> Take a tour
+          </a>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-card rotate-neg-1 slide-in-left">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&h=400&fit=crop" alt="Coffee Shop Dreams">
+          </div>
+          <h3>Automation chatbot</h3>
+          <p> AI-driven chatbot for automating conversations, improving engagement, and enhancing user experience.</p>
+          <div class="project-tags">
+            <span class="project-tag">flute/kivy</span>
+            <span class="project-tag">Gemini Api</span>
+            <span class="project-tag">System libraries</span>
+          </div>
+          <a href="#" class="project-link">
+            <i class="fas fa-play"></i> Take a tour
+          </a>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="project-card rotate-1 slide-in-right">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?w=600&h=400&fit=crop" alt="Rhythm & Motion">
+          </div>
+          <h3>Discount shoping</h3>
+          <p> Unlock the best deals and save big with personalized discounts on your favorite products.</p>
+          <div class="project-tags">
+            <span class="project-tag">Flask</span>
+            <span class="project-tag">Web</span>
+            <span class="project-tag">Data Scraping</span>
+          </div>
+          <a href="#" class="project-link">
+            <i class="fas fa-play"></i> Take a tour
+          </a>
+        </div>
+        
+        <!-- Project 4 -->
+        <div class="project-card rotate-neg-1 zoom-in">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1580894908361-967195033215?w=600&h=400&fit=crop" alt="Character Study: Emotions">
+          </div>
+          <h3>Lost & Found game</h3>
+          <p>A thrilling game where AI helps you uncover hidden objects and solve mysteries.</p>
+          <div class="project-tags">
+            <span class="project-tag">Character Design</span>
+            <span class="project-tag">Procreate</span>
+            <span class="project-tag">Expressions</span>
+          </div>
+          <a href="#" class="project-link">
+            <i class="fas fa-play"></i> Take a tour
+          </a>
+        </div>
+        
+        <!-- Project 5 -->
+        <div class="project-card rotate-1 bounce-in">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1551972251-12070d63502a?w=600&h=400&fit=crop" alt="Science Explorers">
+          </div>
+          <h3>Instagram automation</h3>
+          <p>Automate your Instagram activities for faster growth, consistent posts, and increased engagement.</p>
+          <div class="project-tags">
+            <span class="project-tag">Instabot</span>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">flute/kivy</span>
+          </div>
+          <a href="#" class="project-link">
+            <i class="fas fa-play"></i> Take a tour
+          </a>
+        </div>
+        
+        <!-- Project 6 -->
+        <div class="project-card rotate-neg-1 fade-in-up">
+          <div class="project-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS36xsmM2n3kOTy6gaVeJu1v4t2Wcf7dY_gfg&s" alt="Forest Quest Game">
+          </div>
+          <h3>Draw to image</h3>
+          <p> Convert your hand-drawn sketches into stunning, lifelike digital images using advanced AI.</p>
+          <div class="project-tags">
+            <span class="project-tag">Gemini Api</span>
+            <span class="project-tag">Flask</span>
+            <span class="project-tag">web</span>
+          </div>
+          <a href="#" class="project-link">
+            <i class="fas fa-play"></i> Take a tour
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Doodle Border -->
+    <div class="doodle-border draw-animation">
+      <svg viewBox="0 0 1200 30" fill="none" preserveAspectRatio="none" class="border-svg">
+        <path class="sketch-line smooth-border" d="M0,15 C150,5 300,25 450,15 S750,5 900,15 S1050,25 1200,15" stroke="#2C2C2C" stroke-width="2"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Behind Scenes Section -->
+  <section id="behind" class="behind-section">
+    <div class="container">
+      <h2 class="section-title fade-in-up">Personal Information</h2>
+      
+      <div class="process-container">
+        <!-- Process Breakdown -->
+        <div class="process-steps slide-in-left">
+          <h3>My passion's</h3>
+          
+          <div class="steps-container stagger-container">
+            <!-- Step 1 -->
+            <div class="step stagger-item">
+              <div class="step-number step-yellow">
+                <span>1</span>
+              </div>
+              <div class="step-content">
+                <h4>Reading Books</h4>
+                <p> Immersing myself in different worlds and gaining new perspectives through books.</p>
+              </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="step stagger-item">
+              <div class="step-number step-blue">
+                <span>2</span>
+              </div>
+              <div class="step-content">
+                <h4>Drawing</h4>
+                <p> A hobby where I bring my imagination to life through sketches and illustrations.</p>
+              </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="step stagger-item">
+              <div class="step-number step-yellow">
+                <span>3</span>
+              </div>
+              <div class="step-content">
+                <h4>Self discusion</h4>
+                <p>Engaging in deep conversations with myself to reflect, analyze, and grow.</p>
+              </div>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="step stagger-item">
+              <div class="step-number step-blue">
+                <span>4</span>
+              </div>
+              <div class="step-content">
+                <h4>Gaming</h4>
+                <p>Immersing myself in virtual worlds, challenging skills, and experiencing interactive adventures.</p>
+              </div>
+            </div>
+            
+            <!-- Step 5 -->
+            <div class="step stagger-item">
+              <div class="step-number step-yellow">
+                <span>5</span>
+              </div>
+              <div class="step-content">
+                <h4>New Challenges</h4>
+                <p>Embracing fresh opportunities to grow, learn, and push my limits.</p>
+              </div>
+            </div>
+            
+            <!-- Step 6 -->
+            <div class="step stagger-item">
+              <div class="step-number step-blue">
+                <span>6</span>
+              </div>
+              <div class="step-content">
+                <h4>Explorer Things</h4>
+                <p> Discovering new ideas, experiences, and places that expand my understanding of the world.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Before & After Comparison -->
+        <div class="process-comparisons slide-in-right">
+          <h3>My passionate work's</h3>
+          
+          <!-- Comparison 1 -->
+          <div class="comparison zoom-in">
+            <h4>Animation</h4>
+            
+            <div class="comparison-images">
+              <div class="comparison-image">
+                <h5>Rough Sketch</h5>
+                <img src="rough krighna.png" alt="Rough character sketch">
+              </div>
+              <div class="comparison-image">
+                <h5>Final Character</h5>
+                <img src="krishna.jpg" alt="Finished character design">
+              </div>
+            </div>
+          </div>
+          
+          <!-- Comparison 2 -->
+          <div class="comparison fade-in-up">
+            <h4>Books completed</h4>
+            
+            <div class="comparison-images">
+              <div class="comparison-image">
+                <h5>Name</h5>
+                <li>Power of 48 law</li>
+                <li>How to talk to anyone</li>
+                <li>Autobiography of a yogi</li>
+                <li>Power of subconsius mind</li>
+                <li>The art of laziness</li>
+                <li>The art of thinking in graphs</li>
+                <li>Deep work</li>
+              </div>
+              <div class="comparison-image">
+                <h5>Time</h5>
+                <li>2y ago</li>
+                <li>1y 6m ago</li>
+                <li>1y 2m ago</li>
+                <li>1y ago</li>
+                <li>7m ago</li>
+                <li>4m ago</li>
+                <li>Now learning</li>
+              </div>
+            </div>
+          </div>
+          
+          <div class="more-process bounce-in">
+            <a href="#" class="process-link">
+              <i class="fas fa-images"></i> More passionate work's
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Doodle Border -->
+    <div class="doodle-border draw-animation">
+      <svg viewBox="0 0 1200 30" fill="none" preserveAspectRatio="none" class="border-svg">
+        <path class="sketch-line hill-border" d="M0,10 Q200,25 400,10 T800,10 T1200,10" stroke="#2C2C2C" stroke-width="2"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title fade-in-up">Achievements</h2>
+      
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial rotate-1 fade-in-up">
+          <div class="testimonial-header">
+            <img src="delloit data analytics internship_page_1.png" alt="">
+          </div>
+         </div>
+       
+        <!-- Testimonial 2 -->
+        <div class="testimonial rotate-1 fade-in-up">
+          <div class="testimonial-header">
+            <img src="google_gemini.png" alt="">
+          </div>
+         </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial rotate-1 fade-in-up">
+          <div class="testimonial-header">
+            <img src="software job simulation_page_1.png" alt="">
+          </div>
+         </div>
+  <!-- <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title fade-in-up">Voices from the world</h2>
+      
+      <div class="testimonials-grid">
+        
+        <div class="testimonial rotate-1 fade-in-up">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNKfj6RsyRZqO4nnWkPFrYMmgrzDmyG31pFQ&s" alt="Robert Johnson">
+            </div>
+            <div class="testimonial-author">
+              <h3>Robert Johnson</h3>
+              <p>Mobile Game Studio</p>
+            </div>
+          </div>
+          <p class="testimonial-quote">"Sarah's character animations breathed life into our game. Her attention to detail and ability to capture movement is exceptional."</p>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        
+       
+        <div class="testimonial rotate-neg-1 slide-in-left">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNKfj6RsyRZqO4nnWkPFrYMmgrzDmyG31pFQ&s" alt="Emily Chen">
+            </div>
+            <div class="testimonial-author">
+              <h3>Emily Chen</h3>
+              <p>Educational Content Creator</p>
+            </div>
+          </div>
+          <p class="testimonial-quote">"Working with Sarah was a dream. She translated complex concepts into engaging animations that our audience loves. Clear communication throughout."</p>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        
+       
+        <div class="testimonial rotate-1 slide-in-right">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNKfj6RsyRZqO4nnWkPFrYMmgrzDmyG31pFQ&sp" alt="Michael Torres">
+            </div>
+            <div class="testimonial-author">
+              <h3>Michael Torres</h3>
+              <p>Marketing Director</p>
+            </div>
+          </div>
+          <p class="testimonial-quote">"Our brand campaign exceeded all expectations thanks to Sarah's creative animations. She captured our vision perfectly and delivered on time."</p>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+        
+        
+        <div class="testimonial rotate-neg-1 zoom-in">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNKfj6RsyRZqO4nnWkPFrYMmgrzDmyG31pFQ&s" alt="Jessica Williams">
+            </div>
+            <div class="testimonial-author">
+              <h3>Jessica Williams</h3>
+              <p>Children's Book Author</p>
+            </div>
+          </div>
+          <p class="testimonial-quote">"Sarah's animations for our book trailer brought my characters to life in ways I couldn't imagine. The kids absolutely love it!"</p>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        
+       
+        <div class="testimonial rotate-1 bounce-in">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNKfj6RsyRZqO4nnWkPFrYMmgrzDmyG31pFQ&s" alt="David Kim">
+            </div>
+            <div class="testimonial-author">
+              <h3>David Kim</h3>
+              <p>Music Producer</p>
+            </div>
+          </div>
+          <p class="testimonial-quote">"Finding an animator who could match the energy of my music was tough until I met Sarah. Her visual storytelling perfectly complements the audio."</p>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        
+        
+        <div class="testimonial rotate-neg-1 fade-in-up">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNKfj6RsyRZqO4nnWkPFrYMmgrzDmyG31pFQ&s" alt="Sophia Martinez">
+            </div>
+            <div class="testimonial-author">
+              <h3>Sophia Martinez</h3>
+              <p>Startup Founder</p>
+            </div>
+          </div>
+          <p class="testimonial-quote">"Sarah created an explainer animation that simplified our complex tech product. Our conversion rates doubled after implementing her video!"</p>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    
+    <!-- Doodle Border -->
+    <div class="doodle-border draw-animation">
+      <svg viewBox="0 0 1200 30" fill="none" preserveAspectRatio="none" class="border-svg">
+        <path class="sketch-line complex-border" d="M0,20 C100,10 200,30 300,20 S500,10 600,20 S800,30 900,20 S1100,10 1200,20" stroke="#2C2C2C" stroke-width="2"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title fade-in-up">Send a Scroll</h2>
+      
+      <div class="contact-container">
+        <!-- Contact Info -->
+        <div class="contact-info slide-in-left">
+          <h3>Let's Create Together!</h3>
+          
+          <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+          
+          <div class="contact-details stagger-container">
+            <div class="contact-detail stagger-item">
+              <div class="contact-icon contact-blue">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <p>sandesh592005@gmail.com</p>
+              </div>
+            </div>
+            
+            <div class="contact-detail stagger-item">
+              <div class="contact-icon contact-yellow">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Location</h4>
+                <p>Madhya Pradesh, India</p>
+              </div>
+            </div>
+            
+            <div class="contact-detail stagger-item">
+              <div class="contact-icon contact-blue">
+                <i class="fas fa-hourglass-half"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Working Hours</h4>
+                <p>Monday - Friday: 9 AM - 6 PM PST</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="social-links zoom-in">
+            <h4>Connect With Me</h4>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/mr_hacker9574/" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/sandesh-singh-886016341/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+             
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="contact-form slide-in-right">
+          <!-- Animated Mail Icon -->
+          <div class="mail-icon">
+            <svg viewBox="0 0 24 24" width="100%" height="100%" fill="none" stroke="#4A90E2" stroke-width="2">
+              <path class="sketch-line" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          
+          <form id="contact-form" class="stagger-container">
+            <div class="form-group stagger-item">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group stagger-item">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group stagger-item">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="form-group stagger-item">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            
+            <div class="form-group stagger-item">
+              <button type="submit" class="submit-btn bounce-in">
+                Send ✉️
+              </button>
+            </div>
+            
+            <div id="form-success" class="success-message hide fade-in-up">
+              Message sent successfully!
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Doodle Border -->
+    <div class="doodle-border draw-animation">
+      <svg viewBox="0 0 1200 30" fill="none" preserveAspectRatio="none" class="border-svg">
+        <path class="sketch-line wave-border" d="M0,15 C300,0 600,30 900,15 T1200,15" stroke="#2C2C2C" stroke-width="2"/>
+      </svg>
+    </div>
+  </section>
+
+ <h3 style="text-align: center;">Note : Please give rating on instagram and linkedin</h3>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>Sandesh singh</h2>
+          <p>Python developer & Data Analyst</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-nav">
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#behind">Process</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-contact">
+            <h3>Get in Touch</h3>
+            <p><i class="fas fa-envelope"></i>sandesh592005@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Madhya Pradesh, india</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Sandesh Singh. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Music Toggle -->
+  <div class="music-toggle" id="music-toggle">
+    <i class="fas fa-music"></i>
+    <audio id="bg-music" loop>
+      <source src="krishna_flute_bass_reduced.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <!-- Back To Top -->
+  <div class="back-to-top" id="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" id="scroll-indicator">
+    <div class="indicator-dot"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
